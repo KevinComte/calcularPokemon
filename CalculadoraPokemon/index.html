@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tipos - Pokemon</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32x32.png">
+    
+</head>
+
+<body>
+    <header>
+        <div class="header-info">
+            <div class="header-titulo">
+                <h1>Calculadora de tipos Pokémon</h1>
+            </div>
+            <div class="header-juego">
+                <h3>¡Intenta capturarlo!</h3>
+                <!-- <span>¡Intenta capturarlo!</span> -->
+                <div class="info-pokeball">
+                    <img src="/media/c0y442te9et81.png" alt="" class="btn-captura">
+                    <div class="info-pokeball-texto">
+                        <span class="textopokeball"></span>
+                    </div>
+                </div>
+                <div class="info-poke">
+                    <div class="info-poke-texto-top">
+                        <span class="info-poke-captura"></span>
+                    </div>
+                    <img src="/media/red.png" alt="a" class="poke">
+                    <div class="info-poke-texto-bot">
+                        <span class="nombrepoke"></span>
+                        <!-- <span class="textopoke"></span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenedor-general">
+
+        <!-- Contenedor de tipos -->
+        <div id="contenedor-tipos">
+
+            <form action="">
+                <h3>Selecciona tipo primario de Pokémon:</h3>
+                <div id="contenedor-tipo1">
+
+                    <input type="radio" id="tipo1" name="tipo" value="normal" checked>
+                    <label for="tipo1" id="label-normal1"> <img src="/media/normal.svg" alt="" class="icon-normal">
+                        Normal </label>
+
+                    <input type="radio" id="tipo2" name="tipo" value="lucha">
+                    <label for="tipo2" id="label-lucha1"> <img src="/media/fighting.svg" alt="" class="icon-lucha">
+                        Lucha </label>
+
+                    <input type="radio" id="tipo3" name="tipo" value="volador">
+                    <label for="tipo3" id="label-volador1"> <img src="/media/flying.svg" alt="" class="icon-volador">
+                        Volador </label>
+
+                    <input type="radio" id="tipo4" name="tipo" value="veneno">
+                    <label for="tipo4" id="label-veneno1"> <img src="/media/poison.svg" alt="" class="icon-veneno">
+                        Veneno </label>
+
+                    <input type="radio" id="tipo5" name="tipo" value="tierra">
+                    <label for="tipo5" id="label-tierra1"> <img src="/media/ground.svg" alt="" class="icon-tierra">
+                        Tierra </label>
+
+                    <input type="radio" id="tipo6" name="tipo" value="roca">
+                    <label for="tipo6" id="label-roca1"> <img src="/media/rock.svg" alt="" class="icon-roca"> Roca
+                    </label>
+
+                    <input type="radio" id="tipo7" name="tipo" value="bicho">
+                    <label for="tipo7" id="label-bicho1"> <img src="/media/bug.svg" alt="" class="icon-bicho"> Bicho
+                    </label>
+
+                    <input type="radio" id="tipo8" name="tipo" value="fantasma">
+                    <label for="tipo8" id="label-fantasma1"> <img src="/media/ghost.svg" alt="" class="icon-fantasma">
+                        Fantasma </label>
+
+                    <input type="radio" id="tipo9" name="tipo" value="acero">
+                    <label for="tipo9" id="label-acero1"> <img src="/media/steel.svg" alt="" class="icon-acero"> Acero
+                    </label>
+
+                    <input type="radio" id="tipo10" name="tipo" value="fuego">
+                    <label for="tipo10" id="label-fuego1"> <img src="/media/fire.svg" alt="" class="icon-fuego"> Fuego
+                    </label>
+
+                    <input type="radio" id="tipo11" name="tipo" value="agua">
+                    <label for="tipo11" id="label-agua1"> <img src="/media/water.svg" alt="" class="icon-agua"> Agua
+                    </label>
+
+                    <input type="radio" id="tipo12" name="tipo" value="planta">
+                    <label for="tipo12" id="label-planta1"> <img src="/media/grass.svg" alt="" class="icon-planta">
+                        Planta </label>
+
+                    <input type="radio" id="tipo13" name="tipo" value="eléctrico">
+                    <label for="tipo13" id="label-eléctrico1"> <img src="/media/electric.svg" alt=""
+                            class="icon-eléctrico"> Eléctrico </label>
+
+                    <input type="radio" id="tipo14" name="tipo" value="psíquico">
+                    <label for="tipo14" id="label-psíquico1"> <img src="/media/psychic.svg" alt=""
+                            class="icon-psíquico"> Psíquico </label>
+
+                    <input type="radio" id="tipo15" name="tipo" value="hielo">
+                    <label for="tipo15" id="label-hielo1"> <img src="/media/ice.svg" alt="" class="icon-hielo"> Hielo
+                    </label>
+
+                    <input type="radio" id="tipo16" name="tipo" value="dragón">
+                    <label for="tipo16" id="label-dragón1"> <img src="/media/dragon.svg" alt="" class="icon-dragón">
+                        Dragón </label>
+
+                    <input type="radio" id="tipo17" name="tipo" value="siniestro">
+                    <label for="tipo17" id="label-siniestro1"> <img src="/media/dark.svg" alt="" class="icon-siniestro">
+                        Siniestro </label>
+
+                    <input type="radio" id="tipo18" name="tipo" value="hada">
+                    <label for="tipo18" id="label-hada1"> <img src="/media/fairy.svg" alt="" class="icon-hada"> Hada
+                    </label>
+
+                </div>
+            </form>
+
+            <form action="">
+                <h3>Selecciona tipo secundario de Pokémon:</h3>
+                <div id="contenedor-tipo2">
+
+                    <input type="radio" id="tipo19" name="tipo2" value="normal">
+                    <label for="tipo19" id="label-normal2"> <img src="/media/normal.svg" alt="" id="icon-normal2">
+                        Normal </label>
+
+                    <input type="radio" id="tipo20" name="tipo2" value="lucha">
+                    <label for="tipo20" id="label-lucha2"> <img src="/media/fighting.svg" alt="" id="icon-lucha2"> Lucha
+                    </label>
+
+                    <input type="radio" id="tipo21" name="tipo2" value="volador">
+                    <label for="tipo21" id="label-volador2"> <img src="/media/flying.svg" alt="" id="icon-volador2">
+                        Volador </label>
+
+                    <input type="radio" id="tipo22" name="tipo2" value="veneno">
+                    <label for="tipo22" id="label-veneno2"> <img src="/media/poison.svg" alt="" id="icon-veneno2">
+                        Veneno </label>
+
+                    <input type="radio" id="tipo23" name="tipo2" value="tierra">
+                    <label for="tipo23" id="label-tierra2"> <img src="/media/ground.svg" alt="" id="icon-tierra2">
+                        Tierra </label>
+
+                    <input type="radio" id="tipo24" name="tipo2" value="roca">
+                    <label for="tipo24" id="label-roca2"> <img src="/media/rock.svg" alt="" id="icon-roca2"> Roca
+                    </label>
+
+                    <input type="radio" id="tipo25" name="tipo2" value="bicho">
+                    <label for="tipo25" id="label-bicho2"> <img src="/media/bug.svg" alt="" id="icon-bicho2"> Bicho
+                    </label>
+
+                    <input type="radio" id="tipo26" name="tipo2" value="fantasma">
+                    <label for="tipo26" id="label-fantasma2"> <img src="/media/ghost.svg" alt="" id="icon-fantasma2">
+                        Fantasma </label>
+
+                    <input type="radio" id="tipo27" name="tipo2" value="acero">
+                    <label for="tipo27" id="label-acero2"> <img src="/media/steel.svg" alt="" id="icon-acero2"> Acero
+                    </label>
+
+                    <input type="radio" id="tipo28" name="tipo2" value="fuego">
+                    <label for="tipo28" id="label-fuego2"> <img src="/media/fire.svg" alt="" id="icon-fuego2"> Fuego
+                    </label>
+
+                    <input type="radio" id="tipo29" name="tipo2" value="agua">
+                    <label for="tipo29" id="label-agua2"> <img src="/media/water.svg" alt="" id="icon-agua2"> Agua
+                    </label>
+
+                    <input type="radio" id="tipo30" name="tipo2" value="planta">
+                    <label for="tipo30" id="label-planta2"> <img src="/media/grass.svg" alt="" id="icon-planta2"> Planta
+                    </label>
+
+                    <input type="radio" id="tipo31" name="tipo2" value="eléctrico">
+                    <label for="tipo31" id="label-eléctrico2"> <img src="/media/electric.svg" alt=""
+                            id="icon-eléctrico2"> Eléctrico </label>
+
+                    <input type="radio" id="tipo32" name="tipo2" value="psíquico">
+                    <label for="tipo32" id="label-psíquico2"> <img src="/media/psychic.svg" alt="" id="icon-psíquico2">
+                        Psíquico </label>
+
+                    <input type="radio" id="tipo33" name="tipo2" value="hielo">
+                    <label for="tipo33" id="label-hielo2"> <img src="/media/ice.svg" alt="" id="icon-hielo2"> Hielo
+                    </label>
+
+                    <input type="radio" id="tipo34" name="tipo2" value="dragón">
+                    <label for="tipo34" id="label-dragón2"> <img src="/media/dragon.svg" alt="" id="icon-dragón2">
+                        Dragón </label>
+
+                    <input type="radio" id="tipo35" name="tipo2" value="siniestro">
+                    <label for="tipo35" id="label-siniestro2"> <img src="/media/dark.svg" alt="" id="icon-siniestro2">
+                        Siniestro </label>
+
+                    <input type="radio" id="tipo36" name="tipo2" value="hada">
+                    <label for="tipo36" id="label-hada2"> <img src="/media/fairy.svg" alt="" id="icon-hada2"> Hada
+                    </label>
+
+                    <input type="radio" id="tipo37" name="tipo2" value="ninguno" checked>
+                    <label for="tipo37" id="label-ninguno2"> <img src="/media/normal.svg" alt="" id="icon-ninguno2">
+                        Ninguno </label>
+                </div>
+            </form>
+
+        </div>
+        <div id="informacion">
+            <h3>Debilidades según tipos seleccionados:</h3>
+            <p id="debilidades">Sin elección aún</p>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <h3>Desarrollado por Kevin Comte</h3>
+        </div>
+        <div>
+            <p>Contacto: <a href="https://kevincomte.github.io" target="_blank">Aquí</a>📧<br>
+            Inspirado en la página: <a href="https://www.pkmn.help/" target="_blank"> pkmn.help</a>💖</p>
+        </div>
+    </footer>
+</body>
+<script src="/js/calculartipo.js">
+</script>
+
+</html>

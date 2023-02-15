@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
+
+/* html{
+    line-height: 1.15;
+} */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gayathri', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+}
+
+.header-info {
+    background-color: rgb(231, 4, 15);
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-bottom: 5px solid black;
+}
+
+.header-titulo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 1px 0 #000, 0 0 1px rgb(0 0 0 / 60%), 0 0 2px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 80%), 0 0 4px rgb(0 0 0 / 90%);
+}
+
+.header-juego {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.header-juego h3 {
+    position: left;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.3rem;
+    background: #7670CF;
+    background: linear-gradient(to right, #f3f3f3, #ebbb72, #ecff44);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 5s linear infinite alternate-reverse;
+    background-clip: text;
+    background-size: 300%;
+    background-position: -100%;
+
+}
+
+@keyframes shine {
+    to {
+        background-position: 100%;
+    }
+}
+
+
+/* Animación pokebola */
+.animacionPokeball {
+    animation: shake 1.2s cubic-bezier(.36, .07, .19, .97) 3;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    20% {
+        transform: translate(-10px, 0) rotate(-20deg);
+    }
+
+    30% {
+        transform: translate(10px, 0) rotate(20deg);
+    }
+
+    50% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+.btn-captura {
+    cursor: pointer;
+    transition: 1s all;
+    filter: drop-shadow(1px 1px 15px rgb(221, 217, 217));
+}
+
+.btn-captura:hover {
+    transition: 1s all;
+    filter: drop-shadow(1px 1px 10px black);
+}
+
+.textocaptura {
+    font-size: 1rem;
+}
+
+img {
+    width: 95px;
+    height: 80px;
+}
+
+.info-pokeball {
+    position: relative;
+
+}
+
+.info-pokeball-texto {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 100%;
+
+}
+
+.textopoke {
+    font-size: .8rem;
+}
+
+.nombrepoke {
+    font-size: .9rem;
+}
+
+.textopokeball {
+    font-size: .8rem;
+}
+
+.info-poke-captura {
+    font-size: .8rem;
+}
+
+.info-poke {
+    position: relative;
+}
+
+.info-poke-texto-top {
+    position: absolute;
+    top: 1px;
+    left: 50px;
+}
+
+.info-poke-texto-bot {
+    position: absolute;
+    top: 88px;
+    left: 30px;
+    width: 160px;
+}
+
+.poke {
+    width: 120px;
+    height: 90px;
+    filter: none;
+    margin-top: 10px;
+}
+
+
+
+
+/* ////////////////////////////// */
+/* ESTILOS DE CONTENEDOR GENERAL */
+/* //////////////////////////// */
+.contenedor-general {
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f5;
+}
+
+.contenedor-general img {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    filter: brightness(0%);
+}
+
+#contenedor-tipos {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    margin-top: 2rem;
+
+
+}
+
+form {
+    word-wrap: break-word;
+}
+
+form h3 {
+    margin: auto;
+}
+
+#contenedor-tipo1 {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
+    gap: 1.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#contenedor-tipo2 {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
+    gap: 1.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#informacion {
+    width: 50%;
+    margin: 2rem;
+}
+
+input[type="radio"] {
+    appearance: none;
+    display: inline-block;
+    display: none;
+    margin: auto;
+}
+
+
+label {
+    font-size: .95rem;
+    width: 110px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-top: 0.25rem;
+    transition: .4s all;
+}
+
+
+
+/* //////////////////////////////// */
+/* ESTILO PARA MOSTRAR DEBILIDADES */
+/* ////////////////////////////// */
+span {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 1.1rem;
+}
+
+#informacion h3 {
+    display: inline;
+}
+
+#debilidades {
+    width: 50%;
+}
+
+#debilidades p {
+    color: white;
+    text-shadow: 0 1px 0 #000, 0 0 1px rgb(0 0 0 / 60%), 0 0 2px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 80%), 0 0 4px rgb(0 0 0 / 90%);
+
+}
+
+#debilidades div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+#debilidad-Normal {
+    border: 2px solid #848d92;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #6c767c;
+
+}
+
+#debilidad-Lucha {
+    border: 2px solid #ca3164;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #b02352;
+}
+
+#debilidad-Volador {
+    border: 2px solid #6e91c7;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #5776a5;
+}
+
+#debilidad-Veneno {
+    border: 2px solid #a95fc7;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #904cac;
+}
+
+#debilidad-Tierra {
+    border: 2px solid #db753e;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #b85d2c;
+}
+
+#debilidad-Roca {
+    border: 2px solid #aa9b67;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #827649;
+}
+
+#debilidad-Bicho {
+    border: 2px solid #6fac0e;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #518300;
+}
+
+#debilidad-Fantasma {
+    border: 2px solid #466db1;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #33548f;
+}
+
+#debilidad-Acero {
+    border: 2px solid #489ab6;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #367489;
+}
+
+#debilidad-Fuego {
+    border: 2px solid #e67920;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #b65e16;
+}
+
+#debilidad-Agua {
+    border: 2px solid #3694e7;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #2e78ba;
+}
+
+#debilidad-Planta {
+    border: 2px solid #3ab62d;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #2b8721;
+}
+
+#debilidad-Eléctrico {
+    border: 2px solid #dfb613;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #907200;
+}
+
+#debilidad-Psíquico {
+    border: 2px solid #f05f69;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #cb4851;
+}
+
+#debilidad-Hielo {
+    border: 2px solid #2fc4ad;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #1d8373;
+}
+
+#debilidad-Dragón {
+    border: 2px solid #0373eb;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #0052a8;
+}
+
+#debilidad-Siniestro {
+    border: 2px solid #686075;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #433d4c;
+}
+
+#debilidad-Hada {
+    border: 2px solid #d46fce;
+    display: inline;
+    padding: 5px 5px 2px 5px;
+    margin: 0 5px 5px 0;
+    background-color: #a955a4;
+}
+
+/* Estilo footer */
+footer {
+    background-color: #000;
+    height: 81px;
+    color: hsl(0 0% 96%);
+    display: flex;
+    font-size: .8rem;
+    flex-direction: column;
+}
+
+footer div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+a:link {
+    color: #265301;
+}
+
+a:visited {
+    color: #437A16;
+}
+
+a:focus {
+    border-bottom: 1px solid;
+    background: #BAE498;
+}
+
+a:hover {
+    border-bottom: 1px solid;
+    background: #CDFEAA;
+}
+
+a:active {
+    background: #265301;
+    color: #CDFEAA;
+}
+
+
+
+
+
+
+/* ///////////////////////// */
+/*       Estilo responsivo   */
+/* ///////////////////////// */
+
+@media screen and (max-width:1200px) {
+    .info-poke-texto-bot {
+        width: 140px;
+    }
+
+    #contenedor-tipo1 {
+        grid-template-columns: 75px 75px 75px 75px;
+    }
+
+    #contenedor-tipo2 {
+        grid-template-columns: 75px 75px 75px 75px;
+    }
+
+    label {
+        font-size: .75rem;
+        width: 90px;
+    }
+
+    #debilidades {
+        width: 50%;
+        font-size: .85rem;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .header-titulo {
+        font-size: .7rem;
+    }
+
+    .header-juego h3 {
+        font-size: .8rem;
+    }
+
+    .header-juego span {
+        font-size: .7rem;
+    }
+
+    .info-poke-texto-bot {
+        width: 120px;
+    }
+
+    .contenedor-general {
+        height: 750px;
+    }
+
+    #contenedor-tipo1 {
+        grid-template-columns: 75px 75px 75px 75px;
+        gap: 1.2rem;
+
+    }
+
+    #contenedor-tipo2 {
+        grid-template-columns: 75px 75px 75px 75px;
+        gap: 1.2rem;
+    }
+
+    label {
+        font-size: .75rem;
+        width: 90px;
+    }
+
+    #debilidades {
+        width: 100%;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .header-info {
+        height: 150px;
+    }
+
+    .contenedor-general {
+        height: 700px;
+    }
+
+    .header-titulo {
+        font-size: .6rem;
+    }
+
+    .header-juego h3 {
+        font-size: .9rem;
+    }
+
+    .header-juego span {
+        font-size: .7rem;
+    }
+
+    .info-poke-texto-bot {
+        width: 80px;
+    }
+
+
+    #contenedor-tipo1 {
+        grid-template-columns: 75px 75px 75px 75px;
+        gap: 1rem;
+
+    }
+
+    #contenedor-tipo2 {
+        grid-template-columns: 75px 75px 75px 75px;
+        gap: 1rem;
+    }
+
+    label {
+        font-size: .65rem;
+        width: 80px;
+    }
+
+    #debilidades {
+        width: 100%;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .header-info {
+        height: 150px;
+    }
+
+    .info-pokeball img {
+        height: 50px;
+    }
+
+    .info-poke img {
+        height: 70px;
+        margin: auto;
+    }
+
+    .info-poke-texto-bot {
+        position: absolute;
+        top: 68px;
+        left: 30px;
+    }
+
+    .textopoke {
+        font-size: .3rem;
+    }
+
+    .contenedor-general {
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0 0% 96%);
+        align-items: center;
+        text-align: center;
+        height: 1200px;
+
+    }
+
+    #contenedor-tipo1 {
+        grid-template-columns: 90px 90px 90px 90px;
+        gap: 1.5rem;
+        width: 100%;
+        margin: 10px 0 40px 0;
+        padding: 0;
+
+    }
+
+    #contenedor-tipo2 {
+        grid-template-columns: 90px 90px 90px 90px;
+        gap: 1.5rem;
+        width: 100%;
+        margin: 10px 0 10px 0;
+        padding: 0;
+    }
+
+    label {
+        font-size: .8rem;
+        width: 100px;
+    }
+
+    #debilidades {
+        width: 100%;
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .header-titulo {
+        font-size: .7rem;
+        margin-left: 60px;
+    }
+
+    .header-juego {
+        width: 100%;
+        margin-left: 40px;
+    }
+
+    .info-poke img {
+        height: 70px;
+        margin: auto;
+        width: 80px;
+    }
+
+    .info-poke-texto-bot {
+        position: absolute;
+        top: 68px;
+        left: 20px;
+        width: 60px;
+    }
+
+
+    .contenedor-general {
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0 0% 96%);
+        align-items: center;
+        text-align: center;
+
+    }
+
+    #contenedor-tipo1 {
+        grid-template-columns: 75px 75px 75px 75px;
+        gap: 1rem;
+        width: 100%;
+        margin: 10px 0 40px 0;
+        padding: 0;
+
+    }
+
+    #contenedor-tipo2 {
+        grid-template-columns: 75px 75px 75px 75px;
+        gap: 1rem;
+        width: 100%;
+        margin: 10px 0 10px 0;
+        padding: 0;
+    }
+
+    label {
+        font-size: .6rem;
+        width: 80px;
+    }
+
+    #debilidades {
+        width: 100%;
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .header-info {
+        height: 180px;
+    }
+
+    .header-titulo {
+        font-size: .7rem;
+        margin-left: 60px;
+    }
+
+    .header-juego {
+        width: 50%;
+    }
+
+    .info-poke-texto-top {
+        left: 30px;
+    }
+
+    .info-poke-texto-bot {
+        left: 5px;
+        width: 40px;
+    }
+
+    header span {
+        font-size: .5rem;
+    }
+
+    .info-pokeball img {
+        width: 60px;
+        height: 80px;
+    }
+
+    .info-poke img {
+        width: 60px;
+        height: 80px;
+    }
+
+
+    .contenedor-general {
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0 0% 96%);
+        align-items: center;
+        text-align: center;
+        height: 1000px;
+
+    }
+
+    #contenedor-tipo1 {
+        grid-template-columns: 60px 60px 60px 60px;
+        gap: .9rem;
+        width: 100%;
+        margin: 10px 0 40px 0;
+        padding: 0;
+
+    }
+
+
+
+    #contenedor-tipo2 {
+        grid-template-columns: 60px 60px 60px 60px;
+        gap: .9rem;
+        width: 100%;
+        margin: 10px 0 10px 0;
+        padding: 0;
+    }
+
+    label {
+        font-size: .4rem;
+        width: 70px;
+        height: 25px;
+    }
+
+    .contenedor-general img {
+        height: 50px;
+    }
+
+    #contenedor-tipos h3 {
+        font-size: .8rem;
+    }
+
+    #informacion h3 {
+        font-size: .8rem;
+    }
+
+    #debilidades {
+        width: 80%;
+        font-size: .6rem;
+    }
+
+    #debilidades h3 {
+        font-size: .6rem;
+    }
+
+
+    #debilidades span {
+        font-size: .6rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .header-titulo {
+        font-size: .6rem;
+        margin-left: 90px;
+    }
+
+    .header-juego {
+        margin-right: 80px;
+    }
+
+    .info-pokeball-texto {
+        top: -40px;
+    }
+
+    .info-poke-texto-top {
+        top: -10px
+    }
+
+    .contenedor-general {
+        height: 1100px;
+    }
+
+    #informacion {
+        width: 60%;
+    }
+
+}
